@@ -5,7 +5,8 @@ RSpec.describe Car do
   before do
     @car = Car.new("Ford Mustang", 1500, 36)
   end
-  describe '#initialize'
+
+  describe '#initialize' do
     it 'exists' do
       expect(@car).to be_a Car
     end
@@ -28,6 +29,12 @@ RSpec.describe Car do
 
     it 'has a total cost' do
       expect(@car.total_cost).to eq(54000)
+    end
+  end
+
+  describe '#paint' do
+    it 'has no paint by default' do
+      expect(@car.color).to eq(nil)
     end
   end
 end
