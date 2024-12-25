@@ -36,5 +36,11 @@ RSpec.describe Car do
     it 'has no paint by default' do
       expect(@car.color).to eq(nil)
     end
+
+    it 'can be painted' do
+      @car.paint(:blue)
+
+      expect(@car.color).to eq(:blue)
+    end
   end
 end
